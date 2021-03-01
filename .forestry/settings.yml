@@ -7,10 +7,28 @@ sections:
 - type: heading
   label: Main
 - type: document
+  path: page-about.html
+  label: About
+  match: "**/*"
+- type: directory
+  path: index.html
+  label: Index
+  create: all
+  match: "**/*"
+- type: document
   path: category.html
   label: Main Page (Category)
+- type: document
+  path: page-contact.html
+  label: Contact
+  match: "**/*"
 - type: heading
   label: Portfolio
+- type: directory
+  path: Portfolio
+  label: Portfolio
+  create: all
+  match: "**/*"
 - type: heading
   label: Posts_HTML
 - type: directory
