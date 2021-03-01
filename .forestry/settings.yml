@@ -4,6 +4,13 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: Main
+- type: directory
+  path: index.html
+  label: Index
+  create: all
+  match: "**/*"
 - type: document
   path: category.html
   label: Main Page (Category)
