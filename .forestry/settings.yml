@@ -6,11 +6,6 @@ webhook_url:
 sections:
 - type: heading
   label: Main
-- type: directory
-  path: index.html
-  label: Index
-  create: all
-  match: "**/*"
 - type: document
   path: category.html
   label: Main Page (Category)
@@ -18,6 +13,11 @@ sections:
   label: Portfolio
 - type: heading
   label: Posts_HTML
+- type: directory
+  path: posts_HTML
+  label: Posts_HTML
+  create: all
+  match: "**/*"
 - type: heading
   label: Posts_Python
 - type: heading
