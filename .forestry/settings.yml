@@ -20,10 +20,25 @@ sections:
   match: "**/*"
 - type: heading
   label: Posts_Python
+- type: directory
+  path: posts_python
+  label: Posts_Python
+  create: all
+  match: "**/*"
 - type: heading
   label: Posts_HCI
+- type: directory
+  path: posts_HCI
+  label: Posts_HCI
+  create: all
+  match: "**/*"
 - type: heading
   label: Posts_ML & AI
+- type: directory
+  path: posts_ML&AI
+  label: Posts_ML & AI
+  create: all
+  match: "**/*"
 upload_dir: images
 public_path: "/images"
 front_matter_path: ''
