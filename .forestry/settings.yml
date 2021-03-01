@@ -7,8 +7,6 @@ sections:
 - type: document
   path: category.html
   label: Main Page (Category)
-  match: "**/*"
-  read_only: false
 - type: heading
   label: Portfolio
 - type: heading
