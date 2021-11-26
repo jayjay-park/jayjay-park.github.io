@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>Standard Post - Telescope</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+
+</head>
+
+<body class="ss-bg-white">
+
+    <!-- preloader
+    ================================================== -->
+    <div id="preloader">
+        <div id="loader" class="dots-fade">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+    <div id="top" class="s-wrap site-wrapper">
+
+        <!-- site header
+        ================================================== -->
+        <header class="s-header header">
+
+            <div class="header__top">
+                <div class="header__logo">
+                    <a class="site-logo" href="index.html">
+                        <img src="images/logo.svg" alt="Homepage">
+                    </a>
+                </div>
+
+
+                <!-- toggles -->
+                <a href="#0" class="header__search-trigger"></a>
+                <a href="#0" class="header__menu-toggle"><span>Menu</span></a>
+
+            </div>
+
+            <nav class="header__nav-wrap">
+
+                <ul class="header__nav">
+                    <li><a href="index.html" title="">Home</a></li>
+                    <li class="has-children">
+                        <a href="#0" title="">Categories</a>
+                        <ul class="sub-menu">
+                        <li><a href="category.html">OR</a></li>
+                        <li><a href="category.html">CS</a></li>
+                        <li><a href="category.html">Projects</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="page-about.html" title="">About</a></li>
+                    <li><a href="page-contact.html" title="">Contact</a></li>
+                </ul> <!-- end header__nav -->
+
+            </nav> <!-- end header__nav-wrap -->
+
+        </header> <!-- end s-header -->
+
+
+        <!-- site content ================================================== -->
+        <div class="s-content content">
+            <main class="row content__page">
+                
+                <article class="column large-full entry format-standard">
+
+                    <div class="media-wrap entry__media">
+                        <div class="entry__post-thumb">
+                            <img src="images/post2/post2_thumb.jpg" 
+                                 sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                        </div>
+                    </div>
+
+                    <div class="content__page-header entry__header">
+                        <h1 class="display-1 entry__title">
+                        Supervised Learning: Case of Multi-classification
+                        </h1>
+                        <ul class="entry__header-meta">
+                            <li class="author">By <a href="#0">Jayjay</a></li>
+                            <li class="date">November 26, 2021</li>
+                            <li class="cat-links">
+                                <a href="#0">Projects</a>
+                            </li>
+                        </ul>
+                    </div> <!-- end entry__header -->
+
+                    <div class="entry__content">
+
+                        <p>
+                        From Kaggle Competition hosted by Korean Government ...
+                        </p>
+    
+    
+                        <p>
+                        Problem Statement:
+                        </p>
+    
+
+
+<pre><code>
+import numpy as np
+import os
+import pandas as pd
+import matplotlib.pyplot as plt
+import warnings
+warnings.filterwarnings('ignore')
+%matplotlib inline
+</code></pre>
+
+<pre><code>
+train = pd.read_csv('../input/jica/train.csv')
+test = pd.read_csv('../input/jica/test.csv')
+train.head()
+</code></pre>
+
+<pre><code>
+
+    Id	    S1	C1	S2	C2	S3	C3	S4	C4	S5	C5	CLASS
+0	245765	2	10	1	4	3	10	1	10	2	11	3
+1	235274	4	7	4	4	3	10	1	1	2	3	0
+2	795377	2	13	4	7	1	10	1	13	3	4	1
+3	811537	2	11	3	11	1	1	2	6	3	10	1
+4	422395	3	7	1	9	1	3	3	3	2	9	2
+</code></pre>
+
+<pre><code>
+test.head()
+</code></pre>
+                        
+<pre><code>
+	Id	    S1	C1	S2	C2	S3	C3	S4	C4	S5	C5	CLASS
+0	660391	2	6	1	7	1	12	1	2	4	3	0
+1	288151	2	10	4	9	4	6	3	3	1	2	0
+2	789445	4	6	3	6	4	12	3	12	1	4	2
+3	946741	2	5	4	2	1	10	3	1	1	2	1
+4	561612	3	8	3	9	1	11	3	3	3	12	0
+</code></pre>
+                        
+<pre><code>
+from sklearn import preprocessing, model_selection
+from keras.utils.np_utils import to_categorical
+
+features=['Id', 'S1', 'C1', 'S2', 'C2', 'S3', 'C3', 'S4', 'C4', 'S5', 'C5', 'PokerHand']
+train.columns= features
+test.columns= features
+
+#Train Data
+X_train = train.drop('PokerHand', axis=1)
+X_train = X_train.drop('Id', axis=1)
+y_train = train.iloc[:, 11]
+Y_train = to_categorical(y_train) # one-hot encoding, 
+
+#Test Data
+X_test = test.iloc[:, 1:11] 
+y_test = test.iloc[:, 11]
+Y_test = to_categorical(y_test)
+
+X_test = np.float32(X_test)
+X_train = np.float32(X_train)
+
+
+print(X_train.shape)
+print(Y_train.shape)
+print(X_test.shape)
+print(Y_test.shape)
+
+print(Y_train[0])
+</code></pre>
+                        
+<pre><code>
+(25010, 10)
+(25010, 10)
+(1000000, 10)
+(1000000, 10)
+[0. 0. 0. 1. 0. 0. 0. 0. 0. 0.]
+</code></pre>
+                        
+<pre><code>
+#Model Sequential
+import keras
+from keras.models import Sequential
+from keras.layers.core import Dense, Dropout
+
+model = Sequential()
+model.add(Dense(128, activation='relu', input_dim=10))
+model.add(Dense(64, activation='relu'))
+model.add(Dense(32, activation='relu'))
+model.add(Dense(16, activation='relu'))
+model.add(Dropout(0.2))
+model.add(Dense(10, activation='softmax'))
+</code></pre>
+
+<pre><code>
+#Model Compile
+from keras.optimizers import Adam
+model.compile(loss='categorical_crossentropy', optimizer = Adam(lr=0.001), metrics=['accuracy'])
+
+#Model Fit
+history = model.fit(X_train, Y_train, epochs=800, batch_size= 32, validation_split= 0.2, shuffle=True)
+</code></pre>
+
+<pre><code>
+Epoch 1/800
+626/626 [==============================] - 1s 2ms/step - loss: 1.1069 - accuracy: 0.4798 - val_loss: 0.9666 - val_accuracy: 0.5156
+Epoch 2/800
+626/626 [==============================] - 1s 2ms/step - loss: 1.0007 - accuracy: 0.5034 - val_loss: 0.9622 - val_accuracy: 0.5084
+Epoch 3/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.9825 - accuracy: 0.5180 - val_loss: 0.9565 - val_accuracy: 0.5318
+Epoch 4/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.9746 - accuracy: 0.5370 - val_loss: 0.9531 - val_accuracy: 0.5436
+Epoch 5/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.9682 - accuracy: 0.5389 - val_loss: 0.9505 - val_accuracy: 0.5454
+Epoch 6/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.9601 - accuracy: 0.5449 - val_loss: 0.9459 - val_accuracy: 0.5522
+Epoch 7/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.9563 - accuracy: 0.5458 - val_loss: 0.9408 - val_accuracy: 0.5576
+
+...
+
+Epoch 796/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.0124 - accuracy: 0.9972 - val_loss: 0.0460 - val_accuracy: 0.9956
+Epoch 797/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.0122 - accuracy: 0.9974 - val_loss: 0.0522 - val_accuracy: 0.9960
+Epoch 798/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.0097 - accuracy: 0.9983 - val_loss: 0.0512 - val_accuracy: 0.9958
+Epoch 799/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.0247 - accuracy: 0.9947 - val_loss: 0.0453 - val_accuracy: 0.9948
+Epoch 800/800
+626/626 [==============================] - 1s 2ms/step - loss: 0.0098 - accuracy: 0.9982 - val_loss: 0.0464 - val_accuracy: 0.9952
+</code></pre>
+
+<pre><code>
+acc = history.history['accuracy']
+val_acc = history.history['val_accuracy']
+loss = history.history['loss']
+val_loss = history.history['val_loss']
+
+epochs = range(len(acc))
+
+plt.plot(epochs, acc, 'b', label='Training acc')
+plt.plot(epochs, val_acc, 'y', label='Validation acc')
+plt.title('Training and validation accuracy')
+plt.legend()
+
+
+plt.show()
+</code></pre>
+
+
+                        <p>
+                        <img src="images/post2/post2_graph.png" 
+                                 sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                        </p>
+<pre><code>
+#Test
+
+print(model.evaluate(X_test, Y_test))
+</code></pre>
+
+
+<pre><code>
+31250/31250 [==============================] - 48s 2ms/step - loss: 0.0344 - accuracy: 0.9965
+[0.03440459445118904, 0.9965479969978333]
+</code></pre>
+                        
+<pre><code>
+# uploaded2 = files.upload()
+# submission = pd.read_csv(io.BytesIO(uploaded2['sample_submission.csv']))
+submission = pd.read_csv('../input/jica/sample_submission.csv')
+
+#to_csv
+submission['CLASS'] = predict
+submission['CLASS'].value_counts()
+</code></pre>
+                        
+<pre><code>
+0    502803
+1    422497
+2     47614
+3     21191
+4      4170
+6      1271
+7       240
+5       204
+9        10
+Name: CLASS, dtype: int64
+</code></pre>
+                    </div> <!-- end entry content -->
+
+                </article> <!-- end column large-full entry-->
+
+
+            </main>
+
+        </div> <!-- end s-content -->
+
+
+        <!-- footer
+        ================================================== -->
+        <footer class="s-footer footer">
+            <div class="row">
+                <div class="column large-full footer__content">
+                </div>
+            </div>
+
+            <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"></a>
+            </div>
+        </footer>
+
+    </div> <!-- end s-wrap -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
