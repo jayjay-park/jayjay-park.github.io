@@ -159,39 +159,39 @@ h5, .h5, h6, .h6 {
 }
 
 h1, .h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   line-height: 1.222;
 }
 
 @media screen and (max-width:600px) {
   h1, .h1 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
 }
 
 h2, .h2 {
-  font-size: 1.8rem;
+  font-size: 2.5rem;
   line-height: 1.2;
 }
 
 h3, .h3 {
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   line-height: 1.167;
 }
 
 h4, .h4 {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.333;
 }
 
 h5, .h5 {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   line-height: 1.333;
 }
 
 h6, .h6 {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.5;
   text-transform: uppercase;
   letter-spacing: 0.16rem;
@@ -204,7 +204,7 @@ p img {
 p.lead {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 300;
-  font-size: 2.4rem;
+  font-size: 1.7rem;
   line-height: 1.833;
   margin-bottom: 3.6rem;
   color: #000000;
@@ -212,14 +212,14 @@ p.lead {
 
 @media screen and (max-width:1200px) {
   p.lead {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
 }
 
 @media screen and (max-width:600px) {
   p.lead {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
   }
 
 }
