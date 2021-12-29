@@ -204,7 +204,7 @@ p img {
 p.lead {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 300;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   line-height: 1.833;
   margin-bottom: 3.6rem;
   color: #000000;
@@ -212,14 +212,14 @@ p.lead {
 
 @media screen and (max-width:1200px) {
   p.lead {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
 }
 
 @media screen and (max-width:600px) {
   p.lead {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 
 }
@@ -3123,7 +3123,7 @@ body.search-is-visible {
  * ------------------------------------------------------------------- */
 .entry__header-meta {
   list-style: none;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 300;
   line-height: 1.778;
   margin-left: 0;
