@@ -204,7 +204,7 @@ p img {
 p.lead {
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 300;
-  font-size: 1.7rem;
+  font-size: 1.5rem;
   line-height: 1.833;
   margin-bottom: 3.6rem;
   color: #000000;
@@ -212,14 +212,14 @@ p.lead {
 
 @media screen and (max-width:1200px) {
   p.lead {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
 }
 
 @media screen and (max-width:600px) {
   p.lead {
-    font-size: 1.8rem;
+    font-size: 1.2rem;
   }
 
 }
@@ -3157,7 +3157,7 @@ body.search-is-visible {
  * ## post tags
  * ------------------------------------------------------------------- */
 .entry__tags {
-  margin-top: 6rem;
+  margin-top: 5rem;
   font-family: "Heebo", sans-serif;
 }
 
@@ -3193,7 +3193,7 @@ body.search-is-visible {
 .entry__tags .entry__tag-list a {
   display: inline-block;
   font-weight: 400;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   line-height: inherit;
   color: #1a1a1a;
   border: 1px solid rgba(0, 0, 0, 0.3);
@@ -3234,7 +3234,7 @@ body.search-is-visible {
   display: block;
   font-family: "IBM Plex Sans", sans-serif;
   font-weight: 400;
-  font-size: 12px;
+  font-size: 11px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
   color: #1a1a1a;
