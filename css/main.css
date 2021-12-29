@@ -1555,7 +1555,7 @@ input::-moz-focus-inner {
 }
 
 .display-1 {
-  font-size: 5.6rem;
+  font-size: 2rem;
   line-height: 1.143;
   letter-spacing: -0.05rem;
   margin-top: 0;
@@ -1755,7 +1755,7 @@ input::-moz-focus-inner {
 .masonry .entry__thumb-link::after {
   content: "...";
   font-family: georgia, serif;
-  font-size: 2.4rem;
+  font-size: 2rem;
   z-index: 1;
   display: block;
   height: 88px;
@@ -1794,7 +1794,7 @@ input::-moz-focus-inner {
 }
 
 .masonry .entry__text {
-  padding: 3.2rem 2.8rem 4rem;
+  padding: 3rem 2.3rem 4rem;
   background-color: #ffffff;
 }
 
@@ -1803,7 +1803,7 @@ input::-moz-focus-inner {
 }
 
 .masonry .entry__title {
-  font-size: 2.6rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.231;
   margin-top: 0;
@@ -1820,7 +1820,7 @@ input::-moz-focus-inner {
 }
 
 .masonry .entry__excerpt {
-  font-size: 1.7rem;
+  font-size: 1.4rem;
   line-height: 1.882;
 }
 
@@ -1919,7 +1919,7 @@ input::-moz-focus-inner {
 .format-quote blockquote p,
 .format-link .link-wrap h2 {
   font-family: "Heebo", sans-serif;
-  font-size: 2.8rem;
+  font-size: 2rem;
   font-weight: 400;
   line-height: 1.429;
   color: #000000;
@@ -1932,7 +1932,7 @@ input::-moz-focus-inner {
 .format-link cite {
   display: block;
   font-family: "IBM Plex Sans", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-style: normal;
   line-height: 1.6;
   color: rgba(0, 0, 0, 0.4);
@@ -2093,7 +2093,7 @@ input::-moz-focus-inner {
 
 @media screen and (max-width:1400px) {
   .display-1 {
-    font-size: 5.2rem;
+    font-size: 3rem;
   }
 
 }
@@ -2110,7 +2110,7 @@ input::-moz-focus-inner {
 
 @media screen and (max-width:800px) {
   .display-1 {
-    font-size: 4.6rem;
+    font-size: 2.5rem;
   }
 
   .masonry-wrap {
@@ -2139,7 +2139,7 @@ input::-moz-focus-inner {
 
 @media screen and (max-width:600px) {
   .display-1 {
-    font-size: 4.2rem;
+    font-size: 2.3rem;
   }
 
   .masonry-wrap,
@@ -2158,14 +2158,14 @@ input::-moz-focus-inner {
 
 @media screen and (max-width:500px) {
   .display-1 {
-    font-size: 4rem;
+    font-size: 2rem;
   }
 
 }
 
 @media screen and (max-width:400px) {
   .display-1 {
-    font-size: 3.7rem;
+    font-size: 1.8rem;
   }
 
   .media-wrap {
