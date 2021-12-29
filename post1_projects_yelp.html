@@ -67,15 +67,7 @@
             <nav class="header__nav-wrap">
 
                 <ul class="header__nav">
-                    <li><a href="index.html" title="">Home</a></li>
-                    <li class="has-children">
-                        <a href="#0" title="">Categories</a>
-                        <ul class="sub-menu">
-                        <li><a href="category.html">OR</a></li>
-                        <li><a href="category.html">CS</a></li>
-                        <li><a href="category.html">Projects</a></li>
-                        </ul>
-                    </li>
+                    <li><a href="index.html" title="">Projects</a></li>
                     <li><a href="page-about.html" title="">About</a></li>
                     <li><a href="page-contact.html" title="">Contact</a></li>
                 </ul> <!-- end header__nav -->
@@ -98,23 +90,65 @@
 
                     <div class="content__page-header entry__header">
                         <h1 class="display-1 entry__title">
-                        Social Media Data Analysis - Yelp Review
+                        Visualizing Yelp Review Data with R
                         </h1>
                         <ul class="entry__header-meta">
                             <li class="author">By <a href="#0">Jayjay</a></li>
                             <li class="date">November 26, 2021</li>
                             <li class="cat-links">
                                 <a href="#0">Projects</a>
+                                <a href="#0">R</a>
                             </li>
                         </ul>
                     </div> <!-- end entry__header -->
 
                     <div class="entry__content">
 
+                    <div class="row">
+                        <div class="column large-four tab-full">
+                            <h5>Course</h5>
+                            <p>
+                            Social Media Data Analytics
+                            
+                            </p>
+                        </div>
+    
+                        <div class="column large-four tab-full">
+                            <h5>Contact Info</h5>
+    
+                            <p>
+                            park1125@purdue.edu
+                            </p>
+    
+                        </div>
+                        
+                        <div class="column large-four tab-full">
+                            <h5>Contact Info</h5>
+    
+                            <p>
+                            park1125@purdue.edu
+                            </p>
+    
+                        </div>
+                    </div>
+                        
                         <p>
                         This was part of the project done in Social Media Data Analytics 
                         <a href="https://www.coursera.org/learn/social-media-data-analytics">
                         Coursera Course provided by University of Washington</a>
+                        </p>
+                        <h3>Project Description</h3>
+                        
+                        <p>
+                        This project's purpose was to visualize the distribution of the reviews from the Yelp 
+                        public dataset in order to gain insight on unstructured dataset. 
+                        Specifically, I visualized the relationship between the rate each 
+                        business received and the number of reviews that business received in total. Through visualization, I
+                        was able observe that business with positive reviews tended to receive higher number of reviews when
+                        business with negative reviews tended to receive lower number of reviews.
+                        
+                            - library: ggplot2 (for visualization)
+                            - k-means: (for clustering where k = number of cluster desired, unsupervised method)
                         </p>
 
 
@@ -123,14 +157,12 @@
                         <p>
                         <img src="images/post1/post1_input.png" 
                                  sizes="(max-width: 2000px) 100vw, 2000px" alt="">
+                        
+                        Dataset included user profiles, business information and reviews.  
                         </p>
+                        
+                        <h3>R script</h3>
     
-    
-                        <p>
-                        Input data that will be analyzed through the R code was generated using Yelp API.
-                        </p>
-    
-
 
 <pre><code>
 library(ggplot2)
@@ -142,21 +174,15 @@ business_data = read.csv(file="Desktop/Programming/ML/SocialMediaDataAnalytics/y
 my.lm = lm(stars ~ review_count, data=business_data)
 coeffs = coefficients(my.lm)
 coeffs
-</code></pre>
 
-<pre><code>
 (Intercept) review_count  3.687694616  0.000180883
-</code></pre>
 
-<pre><code>
 # bar chart
 ggplot(business_data) + geom_bar(aes(x=review_count), fill='gray')
 # clustering
 kmeans(business_data[,c(9,10)],3)
 ggplot(business_data, aes(x=review_count, y=stars, color=stars)) + geom_point()
-</code></pre>
 
-<pre><code>
 K-means clustering with 3 clusters of sizes 2161, 106, 75178
 
 Cluster means:
@@ -200,11 +226,13 @@ Available components:
 [7] "size"         "iter"         "ifault"      
 </code></pre>
 
+                        <h3>Visualization of Yelp Review Dataset</h3>
+                        
                         <p>
                         <img src="images/post1/post1_graph" 
                                  sizes="(max-width: 2000px) 100vw, 2000px" alt="">
                         </p>
-        
+
 
                     </div> <!-- end entry content -->
 
