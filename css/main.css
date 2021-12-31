@@ -2731,7 +2731,9 @@ body.search-is-visible {
   .s-header {
     width: 290px;
   }
-
+  .header__top {
+    z-index: 100;
+  }
 }
 
 @media screen and (max-width:1200px) {
@@ -2743,6 +2745,10 @@ body.search-is-visible {
 
   .header__nav {
     font-size: 15.5px;
+  }
+  
+  .header__top {
+    z-index: 100;
   }
 
 }
@@ -2876,6 +2882,10 @@ body.search-is-visible {
     width: 75%;
     font-size: 4.2rem;
   }
+  
+  .header__top {
+    z-index: 100;
+  }
 
 }
 
@@ -2895,12 +2905,19 @@ body.search-is-visible {
   .header__nav li ul {
     font-size: 11px;
   }
+  
+  .header__top {
+    z-index: 100;
+  }
 
 }
 
 @media screen and (max-width:600px) {
   .header__search-form input[type="search"] {
     font-size: 3.4rem;
+  }
+  .header__top {
+    z-index: 100;
   }
 
 }
@@ -2909,7 +2926,9 @@ body.search-is-visible {
   .header__nav-wrap {
     padding: 152px 44px 64px;
   }
-
+  .header__top {
+    z-index: 100;
+  }
 }
 
 @media screen and (max-width:400px) {
@@ -2932,7 +2951,9 @@ body.search-is-visible {
   .header__search-form input[type="search"] {
     font-size: 2.6rem;
   }
-
+  .header__top {
+    z-index: 100;
+  }
 }
 
 
