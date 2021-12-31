@@ -1714,7 +1714,7 @@ input::-moz-focus-inner {
 
 .masonry .grid-sizer,
 .masonry__brick {
-  float: left;
+  float: none;
   width: 25%;
 }
 
@@ -2032,7 +2032,7 @@ input::-moz-focus-inner {
   }
 
   .masonry__brick {
-    padding: 0 1.6vw;
+    padding: 0 2vw;
   }
 
   .masonry .entry {
@@ -2043,7 +2043,7 @@ input::-moz-focus-inner {
 
 @media screen and (max-width:1700px) {
   .masonry__brick {
-    padding: 0 1.4vw;
+    padding: 0 1.8vw;
   }
 
   .masonry .entry {
@@ -2058,7 +2058,7 @@ input::-moz-focus-inner {
   }
 
   .masonry__brick {
-    padding: 0 1.2vw;
+    padding: 0 1.6vw;
   }
 
   .masonry .entry {
@@ -2082,7 +2082,7 @@ input::-moz-focus-inner {
   }
 
   .masonry__brick {
-    padding: 0 1.8vw;
+    padding: 0 2.2vw;
   }
 
   .masonry .entry {
