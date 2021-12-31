@@ -253,7 +253,7 @@ blockquote {
   margin: 4rem 0;
   padding: 4rem 4rem;
   border-left: 4px solid black;
-  /* position: relative; */
+  position: relative;
 }
 
 @media screen and (max-width:600px) {
@@ -1728,7 +1728,7 @@ input::-moz-focus-inner {
 }
 
 .masonry .entry__thumb {
-  /* position: relative; */
+  position: relative;
   overflow: hidden;
 }
 
@@ -1885,7 +1885,7 @@ input::-moz-focus-inner {
   padding: 2.4rem 3rem 5.6rem;
   min-height: 324px;
   width: 100%;
-  /* position: relative; */
+  position: relative;
 }
 
 .format-quote .entry__thumb::before,
@@ -2195,7 +2195,7 @@ input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- */
 .s-wrap {
-  /*position: relative;*/
+  position: relative;
 }
 
 .s-header {
@@ -2732,6 +2732,7 @@ body.search-is-visible {
     width: 290px;
   }
   .header__top {
+    position: fixed;
     z-index: 100;
   }
 }
@@ -2748,6 +2749,7 @@ body.search-is-visible {
   }
   
   .header__top {
+    position: fixed;
     z-index: 100;
   }
 
@@ -2884,6 +2886,7 @@ body.search-is-visible {
   }
   
   .header__top {
+    position: fixed;
     z-index: 100;
   }
 
@@ -2907,6 +2910,7 @@ body.search-is-visible {
   }
   
   .header__top {
+    position: fixed;
     z-index: 100;
   }
 
@@ -2917,6 +2921,7 @@ body.search-is-visible {
     font-size: 3.4rem;
   }
   .header__top {
+    position: fixed;
     z-index: 100;
   }
 
@@ -2952,6 +2957,7 @@ body.search-is-visible {
     font-size: 2.6rem;
   }
   .header__top {
+    position: fixed;
     z-index: 100;
   }
 }
