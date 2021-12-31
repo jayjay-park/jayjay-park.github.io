@@ -2131,7 +2131,7 @@ input::-moz-focus-inner {
   }
 
   .masonry__brick {
-    padding: 0 15rem;
+    padding: 3rem 15rem;
   }
 
   .masonry .entry {
