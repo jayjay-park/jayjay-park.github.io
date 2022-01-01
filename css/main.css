@@ -2195,12 +2195,13 @@ input::-moz-focus-inner {
  *
  * ------------------------------------------------------------------- */
 .s-wrap {
-  position: relative;
+  /*position: relative;*/
 }
 
 .s-header {
-  z-index: 100;
-  display: -ms-flexbox;
+  /*z-index: 100;*/
+  z-index: 1;
+  /*display: -ms-flexbox;*/
   display: -webkit-flex;
   display: flex;
   -webkit-flex-flow: column nowrap;
