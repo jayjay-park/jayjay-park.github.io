@@ -5,7 +5,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Standard Post - Telescope</title>
+    <title>Supervised Learning | Jayjay Park</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -131,9 +131,9 @@
                             <h3>Project Description</h3>
                             
                             <p>
-                            In this kaggle competition (<a href="https://www.kaggle.com/c/jica/data">Jeonju ICT Innovation AI Kaggle Challenge</a>), 
-                            participants were expected to create a model that correctly classifies 
-                            each poker hand types. (You can access to my Kaggle Notebook through this <a href="https://www.kaggle.com/jayjaypark/jayjay-park/notebook">Link
+                            In (<a href="https://www.kaggle.com/c/jica/data">Jeonju ICT Innovation AI Kaggle Challenge</a>), 
+                            I created a model that classifies 
+                            each poker hand types. <br>(You can access to my Kaggle Notebook through this <a href="https://www.kaggle.com/jayjaypark/jayjay-park/notebook">Link
                             </a>)
 
                             <h3>Training Data</h3>
@@ -141,7 +141,9 @@
                             dataset is insufficient to represent its true domain. In this case, the number of training dataset that 
                             represents each categories decreased in descending order.
                             <br>
-                            10 Poker hand categories:
+                            <br>
+                            <b>10 Poker hand categories:</b>>
+                            <br>
                             <ol>
                             <li>Nothing in hand; not a recognized poker hand, 12493 instances (49.95202% / 50.117739%)</li>
                             <li>One pair; one pair of equal ranks within five cards, 10599 instances, (42.37905% / 42.256903%)</li>
@@ -157,18 +159,19 @@
 
                             <br>
                             Considering such feature of the training dataset, followings are the approach I used:
+                            <br>
                                 <ul>
                                     <li>
-                                    Framework used: Keras
+                                    <b>Framework used:</b>> Keras
                                     </li>
                                     <li>
-                                    Sequential Model: used softmax for activation function as it is multi-classification model
+                                    <b>Sequential Model:</b> used softmax for activation function as it is multi-classification model
                                     </li>
                                     <li>
-                                    Model Compile: used adam(Adaptive Moment Estimation) optimizer, categorical_crossentropy loss function
+                                    <b>Model Compile:</b>> used adam(Adaptive Moment Estimation) optimizer, categorical_crossentropy loss function
                                     </li>
                                     <li>
-                                    Model Fit: intentionally decreased the batch size and made shuffle to True to randomize
+                                    <b>Model Fit:</b> intentionally decreased the batch size and made shuffle to True to randomize
                                     </li>
                                 </ul>
                             
@@ -179,8 +182,9 @@
                             <h3>Result</h3>
                             
                             <pre><code>
-                                accuracy: 0.9965, loss: 0.0344
-                            </code></pre>>
+
+                            accuracy: 0.9965, loss: 0.0344
+                            </code></pre>
                             <p>
                             <img src="images/post2/post2_graph.png" 
                                      sizes="(max-width: 2000px) 100vw, 2000px" alt="">
