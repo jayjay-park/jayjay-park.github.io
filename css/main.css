@@ -60,12 +60,12 @@
  *
  * ------------------------------------------------------------------- */
 html {
-    font-size : 9.5px;
+    font-size : 10px;
 }
 
 @media screen and (max-width: 400px) {
     html {
-        font-size : 9px;
+        font-size : 9.5px;
     }
 }
 
@@ -77,7 +77,7 @@ body {
 body {
     background  : #f6f7f8;
     font-family : "IBM Plex Sans", sans-serif;
-    font-size   : 1.2rem;
+    font-size   : 1.3rem;
     font-style  : normal;
     font-weight : normal;
     line-height : 1.789;
