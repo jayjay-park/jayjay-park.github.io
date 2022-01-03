@@ -1537,7 +1537,7 @@ input::-moz-focus-inner {
 }
 
 .display-1 {
-    font-size      : 5.6rem;
+    font-size      : 2.6rem;
     line-height    : 1.143;
     letter-spacing : -.05rem;
     margin-top     : 0;
@@ -2068,7 +2068,7 @@ input::-moz-focus-inner {
 
 @media screen and (max-width: 1400px) {
     .display-1 {
-        font-size : 3rem;
+        font-size : 2.6rem;
     }
 }
 
@@ -2084,7 +2084,7 @@ input::-moz-focus-inner {
 
 @media screen and (max-width: 800px) {
     .display-1 {
-        font-size : 2.6rem;
+        font-size : 2.5rem;
     }
 
     .masonry-wrap {
@@ -2130,13 +2130,13 @@ input::-moz-focus-inner {
 
 @media screen and (max-width: 500px) {
     .display-1 {
-        font-size : 2.2rem;
+        font-size : 2rem;
     }
 }
 
 @media screen and (max-width: 400px) {
     .display-1 {
-        font-size : 2rem;
+        font-size : 1.9rem;
     }
 
     .media-wrap {
