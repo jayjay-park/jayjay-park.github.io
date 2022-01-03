@@ -162,14 +162,14 @@ h6, .h6 {
 }
 
 h1, .h1 {
-    font-size   : 1.7rem;
+    font-size   : 2rem;
     line-height : 1.222;
 }
 
 @media screen and (max-width: 600px) {
 
     h1, .h1 {
-        font-size : 1.7rem;
+        font-size : 1.9rem;
     }
 }
 
@@ -3127,7 +3127,7 @@ body.search-is-visible {
  * ------------------------------------------------------------------- */
 .entry__header-meta {
     list-style  : none;
-    font-size   : 1.8rem;
+    font-size   : 1.6rem;
     font-weight : 300;
     line-height : 1.778;
     margin-left : 0;
