@@ -2622,15 +2622,15 @@ input::-moz-focus-inner {
 
 @media screen and (max-width: 800px) {
     .header__nav {
-        font-size : 18px;
+        font-size : 17px;
     }
 
     .header__nav > li > a {
-        line-height : 6.8rem;
+        line-height : 6.5rem;
     }
 
     .header__nav li.has-children > a::after {
-        top : 30px;
+        top : 28px;
     }
 
     .header__nav li ul {
@@ -2640,29 +2640,29 @@ input::-moz-focus-inner {
 
 @media screen and (max-width: 500px) {
     .header__logo {
-        left : 3.4rem;
+        left : 3.2rem;
     }
 
     .header__nav-wrap {
-        padding : 152px 44px 64px;
+        padding : 150px 42px 62px;
     }
 
     .header__menu-toggle {
-        right : 3.4rem;
+        right : 3.2rem;
     }
 }
 
 @media screen and (max-width: 400px) {
     .header__logo {
-        left : 2.4rem;
+        left : 2.2rem;
     }
 
     .header__nav-wrap {
-        padding : 140px 40px 64px;
+        padding : 138px 38px 62px;
     }
 
     .header__menu-toggle {
-        right : 2.4rem;
+        right : 2.2rem;
     }
 }
 
