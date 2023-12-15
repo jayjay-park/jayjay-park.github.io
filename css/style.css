@@ -1,43 +1,12 @@
-/* @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200); */
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200);
 
-@font-face {
+/* @font-face {
   font-family: 'Raleway';
-  src: url('../asset/Raleway-Black.woff2') format('woff2'),
-       url('../asset/Raleway-Black-Italic.woff2') format('woff2'),
-       url('../asset/Raleway-Bold.woff2') format('woff2'),
-       url('../asset/Raleway-ExtraBold.woff2') format('woff2'),
-       url('../asset/Raleway-ExtraBoldItalic.woff2') format('woff2'),
-       url('../asset/Raleway-ExtraLight.woff2') format('woff2'),
-       url('../asset/Raleway-ExtraLightItalic.woff2') format('woff2'),
-       url('../asset/Raleway-Italic.woff2') format('woff2'),
-       url('../asset/Raleway-Light.woff2') format('woff2'),
-       url('../asset/Raleway-LightItalic.woff2') format('woff2'),
-       url('../asset/Raleway-Medium.woff2') format('woff2'),
-       url('../asset/Raleway-MediumItalic.woff2') format('woff2'),
-       url('../asset/Raleway-Regular.woff2') format('woff2'),
-       url('../asset/Raleway-SemiBold.woff2') format('woff2'),
-       url('../asset/Raleway-SemiBoldItalic.woff2') format('woff2'),
-       url('../asset/Raleway-Thin.woff2') format('woff2'),
-       url('../asset/Raleway-Black.woff') format('woff'),
-       url('../asset/Raleway-Black-Italic.woff') format('woff'),
-       url('../asset/Raleway-Bold.woff') format('woff'),
-       url('../asset/Raleway-ExtraBold.woff') format('woff'),
-       url('../asset/Raleway-ExtraBoldItalic.woff') format('woff'),
-       url('../asset/Raleway-ExtraLight.woff') format('woff'),
-       url('../asset/Raleway-ExtraLightItalic.woff') format('woff'),
-       url('../asset/Raleway-Italic.woff') format('woff'),
-       url('../asset/Raleway-Light.woff') format('woff'),
-       url('../asset/Raleway-LightItalic.woff') format('woff'),
-       url('../asset/Raleway-Medium.woff') format('woff'),
-       url('../asset/Raleway-MediumItalic.woff') format('woff'),
-       url('../asset/Raleway-Regular.woff') format('woff'),
-       url('../asset/Raleway-SemiBold.woff') format('woff'),
-       url('../asset/Raleway-SemiBoldItalic.woff') format('woff'),
-       url('../asset/Raleway-Thin.woff') format('woff');
-  /* font-weight: 200; */
-  /* font-style: normal; */
-}
-
+  src: url('../asset/Raleway-Bold.woff2') format('woff2'),
+       url('../asset/Raleway-Bold.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+} */
 
 
 
