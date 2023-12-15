@@ -2,8 +2,8 @@
 
 @font-face {
   font-family: 'Raleway';
-  src: url('../asset/Raleway-Black.woff2') format('woff2'),
-       url('../asset/Raleway-Black.woff') format('woff');
+  src: url('../asset/Raleway-Bold.woff2') format('woff2'),
+       url('../asset/Raleway-Bold.woff') format('woff');
   font-weight: 200;
   font-style: normal;
 }
