@@ -1,4 +1,13 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200);
+/* @import url(http://fonts.googleapis.com/css?family=Raleway:400,300,500,600,700,800,900,100,200); */
+
+@font-face {
+  font-family: 'Raleway';
+  src: url('assets/Raleway-Regular.woff2') format('woff2'),
+       url('assets/Raleway-Regular.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
 
 body{
   font-family: 'Raleway', sans-serif;
