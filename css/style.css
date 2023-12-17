@@ -386,6 +386,15 @@ CONTENT
 .content .text-intro{
   width: 1140px;
   margin-top: 150px;
+  /* margin-bottom: 350px; */
+  /* Add a fixed height to prevent content shifting */
+  height: 200px; /* Adjust this value based on your desired typewriter height */
+  margin: 150px auto 0;
+}
+
+.content .text-middle{
+  width: 1140px;
+  margin-top: 350px;
   margin: 150px auto 0;
 }
 
@@ -772,13 +781,14 @@ button.fancy {
   overflow: visible;
   padding: 1.2em 1.9em;
   position: relative;
+  /* position: fixed; */
   text-align: center;
   text-decoration: none;
   text-transform: none;
   transition: all 0.3s ease-in-out;
   user-select: none;
   /* width: 16.8125rem; */
-  width: 13.95rem;
+  width: 13.9rem;
 }
 button.fancy::before {
   content: ' ';
