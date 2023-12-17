@@ -759,7 +759,7 @@ Credit: https://www.codewithfaraz.com/content/162/create-an-animated-button-with
 button.fancy {
   -webkit-appearance: button;
   background-color: transparent;
-  border: 2px solid #000;
+  border: 1.8px solid #000;
   border-radius: 0;
   box-sizing: border-box;
   color: #fff;
@@ -784,7 +784,7 @@ button.fancy::before {
   content: ' ';
   /* width: 1.5625rem; */
   width: 1.1rem;
-  height: 1.5px;
+  height: 1.3px;
   background: black;
   top: 50%;
   left: 1.5em;
@@ -808,7 +808,7 @@ button.fancy a {
   color: black;
 }
 button.fancy .top-key {
-  height: 2px;
+  height: 1.8px;
   width: 1.5625rem;
   top: -2px;
   left: 0.625rem;
@@ -818,7 +818,7 @@ button.fancy .top-key {
   transition: width 0.5s ease-out, left 0.3s ease-out;
 }
 button.fancy .bottom-key-1 {
-  height: 2px;
+  height: 1.8px;
   width: 1.5625rem;
   right: 1.875rem;
   bottom: -2px;
@@ -828,7 +828,7 @@ button.fancy .bottom-key-1 {
   transition: width 0.5s ease-out, right 0.3s ease-out;
 }
 button.fancy .bottom-key-2 {
-  height: 2px;
+  height: 1.8px;
   width: 0.625rem;
   right: 0.625rem;
   bottom: -2px;
