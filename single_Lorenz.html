@@ -1,0 +1,276 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Jayjay's Portfolio</title>
+  <meta name="description" content="JAYJAY">
+  <meta name="keywords" content="Jayjay Park, Portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="thomsoon.com">
+  <link rel="icon" type="image/png" href="img/icon.png" />
+
+<!--Style-->
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-responsive.css">  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+</head>
+
+<body>
+
+
+<!--Preloader-->
+<div class="preloader" id="preloader">
+    <div class="item">
+      <div class="spinner">
+      </div>
+    </div>
+</div>
+
+<div class="opacity-nav">
+        <div class="menu-index" id="buttons" style="z-index:999999">
+        <i class="fa  fa-close"></i>
+        </div>
+    <ul class="menu-fullscreen">
+      <li><a class="ajax-link" href="index.html">Home</a></li>
+      <li><a class="ajax-link" href="projects.html">Projects</a></li>
+      <li><a class="ajax-link" href="publication.html">Publications</a></li>
+      <li><a class="ajax-link" href="about-us.html">About</a></li>
+      <li><a class="ajax-link" href="contact.html">Contact</a></li>
+    </ul>
+</div>
+
+
+  <!--Header-->
+  <header id="fullscreen">
+      <div class="logo" id="full"><a class="ajax-link" href="index.html">JAYJAY</a></div>
+        <div class="menu-index" id="button">
+        <i class="fa fa-bars"></i>
+        </div>
+
+  </header>
+
+  <div class="clear"></div>
+
+
+  <!--Content-->
+
+  <div class="content" id="ajax-content">
+
+
+        <div class="text-intro">
+
+          <h1>N-CATS: Neural Chaotic Auto-Correlation for Time Series</h1>
+          
+            <div class= "one-column">
+              <p></p>
+            </div>
+
+            <div class="two-column">
+              
+              <!-- Motivated by the inquiry, "Can a Neural ODE learn a chaotic system?", preliminary experiments with Lorenz-63 revealed the model's limitations in capturing the system’s statistics and long-term behavior. Discovering that Neural ODE’s low generalization error did not imply that the true dynamics are learned prompted us to explore how Neural ODE could be improved. Integrating ergodic theory of dynamical systems with statistical ML, we employed metrics such as Lyapunov spectrum or time average, to enhance the training algorithm and rigorously evaluate the model’s understanding of the true dynamics. -->
+
+              <blockquote class="blockquote"><p>Inspired by a recent discovery of cryptocurrency market being a chaotic system, ...</p></blockquote>
+                <br />
+            </div>
+
+	          <div class="one-column">
+	            <p>Motivation</p>
+	          </div>
+
+		          <div class="two-column">
+		            <p>Due to high volatility, predicting cryptocurrency price is a challenging problem
+                <br><br>
+                Recent discoveries claim that the cryptocurrency market shows chaotic behavior.
+                <br><br>
+                <ul>
+                  <li>1. Study conducted by Yang et al. points out how cryptocurrency price prediction is an even more difficult problem to solve than stock price prediction through analysis with entropy.</li>
+                  <li>2. A study conducted by Yi et al. shows that the cryptocurrency market is weakly market efficient, which just means that predicting crypto-asset price with just past trends of price is impossible</li>
+                </ul>
+                
+                </p>
+
+                
+                <!-- <blockquote class="otro-blockquote">
+                  Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while. That's because they were able to connect experiences they've had and synthesize new things.
+                  <span>Steve Jobs</span>
+                </blockquote> -->
+		          </div>   
+
+              
+
+
+            <div class="one-column">
+              <p>Research Gap</p>
+            </div>
+
+              <div class="two-column">
+                <p>No existing model learns both data trend + market dynamics for cryptocurrency-price prediction
+                  <br><br>
+                  No existing model is trained with information on chaotic behavior of cryptocurrency market
+                </p>
+              </div>
+
+
+
+            <div class="one-column">
+                <p>Research Questions</p>
+              </div>
+  
+                <div class="two-column">
+                  <p>1. Can we verify if the cryptocurrency market is indeed chaotic? 
+                    <br>
+                    2. How do baseline models perform in predicting price? 
+                    <br>
+                    3. How can we make a model learn market dynamics information? 
+                    <br>
+                    4. How does the new model perform? 
+                    </p>
+                  </div>
+
+
+              <div class="one-column">
+                  <p>Method</p>
+                </div>
+    
+                  <div class="two-column">
+                  <p>Data:
+                    <br>
+                    <ul>
+                      <li>Kaggle Bitcoin Historical Dataset.</li>
+                      <li>The Dataset includes every 1 minute historical price in 2021. Only used closing price, as a problem of interest is a univariate time series prediction.
+                      </li>
+                    </ul></p>
+
+                    <p>
+                    Baseline:
+                    <br>
+                    <ul>
+                      <li>1. LSTM</li>
+                      <li>2. Neural ODE (Neural Ordinary Differential Equations)
+                      </li>
+                    </ul>
+                    </p>
+                
+                    <p>
+                      <div><img style="display: block; margin: 0 auto;" src="img/Screenshot 2023-12-06 062621.png" width="20%"><p style="text-align: center;">Architecture of N-CATS</p></div><br/><br/>
+                    N-CATS learns both market’s chaotic dynamic along with past trends of crypto-asset price, with the new auto-correlation loss function. 
+
+                  </p>  
+                  </div>
+                 				  
+
+
+                  <div class="one-column">
+                    <p>Result</p>
+                  </div>
+      
+                    <div class="two-column">
+                  
+                      <div><img style="display: block; margin: 0 auto;" src="img/multi_pred_node (2) (1)-1.png" width="70%"><p style="text-align: center;">Multi-step prediction of Neural ODE</p></div><br/><br/>
+                      <div><img style="display: block; margin: 0 auto;" src="img/ncats_msp_nd_1000-1 (1) (1).png" width="70%"><p style="text-align: center;">Multi-step prediction of N-CATS</p></div><br/><br/>
+                      <p>1. Was able to verify if crypto-currency market is indeed chaotic as claimed by previous works
+                        <br>
+                        2. Devised a new training algorithm for N-CATS
+                        <br>
+                        3. Found out that LSTM does not perform well in both short term and long term prediction with limited data. Neural ODE performs well in short term prediction but performs poorly in long term prediction.
+                        <br>
+                        4. N-CATS outperform industry standards(LSTM) and baseline(Neural ODE) by performing great in both short term and long term prediction.
+                        </p>
+                    </div>  
+                    
+
+
+
+
+                    <div class="one-column">
+                      <p>Contribution to the Literature</p>
+                    </div>
+        
+                      <div class="two-column">
+                        <p>Novelty: the first work to solve crypto-currency price prediction problem using auto-correlation in training deep learning model</p>
+                      </div>
+                               
+                             
+
+                <div class="clear"></div>   				  
+                 				        
+				        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				        
+				        <!-- <img src="img/single/1.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/2.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/3.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/4.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/5.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/6.jpg" width="100%"> -->
+        
+        
+					        <div class="prev-next">
+					        
+					          <div class="prev-button"><a class="ajax-link" href="single-fullscreen.html">Previous work</a></div>
+					          <div class="next-button"><a class="ajax-link" href="projects.html">Next work</a></div>
+					
+					        </div>
+            </div>
+        
+    </div>
+
+
+
+  <!--Home Sidebar-->
+
+<div id="ajax-sidebar"></div>
+
+
+  <!--Footer-->
+
+  <!-- <footer>
+
+    <div class="footer-margin">
+      <div class="social-footer">
+        <a href="https://www.facebook.com/thomsooncom"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.behance.net/TomaszMazurczak"><i class="fa fa-behance"></i></a>
+      
+      </div>     
+      <div class="copyright">Distributed By: <a class="" href="https://htmltemplates.co" target="_blank">HTMLtemplates.co</a></div>
+      
+
+    
+    </div>
+
+
+  </footer> -->
+
+
+
+<!--Scripts-->
+
+  <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="js/typed.js" type="text/javascript"></script>
+  <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>  
+  <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>    
+  <script src="js/jquery.jkit.1.2.16.min.js"></script>
+ 
+  <script src="js/script.js" type="text/javascript"></script>
+  
+	<script>
+    $('#button, #buttons').on('click', function() {
+      $( ".opacity-nav" ).fadeToggle( "slow", "linear" );
+    // Animation complete.
+    });
+  </script>
+
+
+</body>
+</html>

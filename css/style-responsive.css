@@ -8,6 +8,10 @@
     width:1000px;
   }
 
+  .content .text-middle{
+    width:1000px;
+  }
+
   .footer-margin{
     width:1000px;
   }
@@ -62,11 +66,19 @@
     width:800px;
   }
 
+  .content .text-middle{
+    width:800px;
+  }
+
   .footer-margin{
     width:800px;
   }
 
   .content .text-intro h1, .content .text-intro p{
+    width:60%;
+  }
+
+  .content .text-middle{
     width:60%;
   }
 
@@ -112,6 +124,10 @@
   }
 
   .content .text-intro{
+    width:600px;
+  }
+
+  .content .text-middle{
     width:600px;
   }
 
@@ -179,6 +195,10 @@
   }
 
   .content .text-intro{
+    width:400px;
+  }
+
+  .content .text-middle{
     width:400px;
   }
 
@@ -274,6 +294,10 @@
   }
 
   .content .text-intro{
+    width:280px;
+  }
+
+  .content .text-middle{
     width:280px;
   }
 
