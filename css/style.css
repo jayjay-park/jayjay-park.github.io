@@ -550,7 +550,7 @@ CONTENT
       /*Lists */
       
       li {
-        color:#101010;
+        color:#8d8d8d;
         list-style:none;
         position: relative;
         padding-left:50px;
@@ -562,7 +562,7 @@ CONTENT
         font-family:FontAwesome;
         position: absolute;
         left: 0;
-        color:#394346;
+        color:#8d8d8d;
         font-size:15px;
       }
       /* full circle  */

@@ -118,13 +118,15 @@
               </div>
   
                 <div class="two-column">
-                  <p>1. Can we verify if the cryptocurrency market is indeed chaotic? 
-                    <br>
-                    2. How do baseline models perform in predicting price? 
-                    <br>
-                    3. How can we make a model learn market dynamics information? 
-                    <br>
-                    4. How does the new model perform? 
+                  <p>
+                    Queestions we want to answer includes:
+                    <ul>
+                      <li>1. Can we verify if the cryptocurrency market is indeed chaotic?</li>
+                      <li>2. How do baseline models perform in predicting price?</li>
+                      <li>3. How can we make a model learn market dynamics information?</li>
+                      <li>4. How does the new model perform? </li>
+                    </ul>
+            
                     </p>
                   </div>
 
@@ -138,7 +140,7 @@
                     <br>
                     <ul>
                       <li class="one">Kaggle Bitcoin Historical Dataset.</li>
-                      <li>The Dataset includes every 1 minute historical price in 2021. Only used closing price, as a problem of interest is a univariate time series prediction.
+                      <li class="one">The Dataset includes every 1 minute historical price in 2021. Only used closing price, as a problem of interest is a univariate time series prediction.
                       </li>
                     </ul></p>
 
@@ -153,34 +155,48 @@
                     </p>
                 
                     <p>
-                      <div><img style="display: block; margin: 0 auto;" src="img/Screenshot 2023-12-06 062621.png" width="20%"><p style="text-align: center;">Architecture of N-CATS</p></div><br/><br/>
-                    N-CATS learns both market’s chaotic dynamic along with past trends of crypto-asset price, with the new auto-correlation loss function. 
-
-                  </p>  
+                    New Model, N-CATS:
+                      <div><img style="display: block; margin: 0 auto;" src="img/Screenshot 2023-12-06 062621.png" width="25%"><p style="text-align: center;">Architecture of N-CATS</p></div><br/><br/>
+                    </p>
+                    <p>
+                    For the latent model, we can use any type of neural network, but for this project, let's use Neural Stochastic Differential Equation, from torchSDE.
+  
+                    </p>
+                    
                   </div>
                  				  
 
 
                   <div class="one-column">
-                    <p>Result</p>
+                    <p>Findings</p>
                   </div>
       
                     <div class="two-column">
-                  
+                      <br/>
                       <div><img style="display: block; margin: 0 auto;" src="img/multi_pred_node (2) (1)-1.png" width="70%"><p style="text-align: center;">Multi-step prediction of Neural ODE</p></div><br/><br/>
                       <div><img style="display: block; margin: 0 auto;" src="img/ncats_msp_nd_1000-1 (1) (1).png" width="70%"><p style="text-align: center;">Multi-step prediction of N-CATS</p></div><br/><br/>
-                      <p>1. Was able to verify if crypto-currency market is indeed chaotic as claimed by previous works
-                        <br>
-                        2. Devised a new training algorithm for N-CATS
-                        <br>
-                        3. Found out that LSTM does not perform well in both short term and long term prediction with limited data. Neural ODE performs well in short term prediction but performs poorly in long term prediction.
-                        <br>
-                        4. N-CATS outperform industry standards(LSTM) and baseline(Neural ODE) by performing great in both short term and long term prediction.
+                      
+                      <p>
+                        Some of the findings includes:
+                        <ul>
+                          <li class="two">1. When computing lyapunov exponent from the time-series dataset, I was able to verify that crypto-currency market is indeed chaotic as claimed by previous works. When using function from nolds package, lyap_r, layp_e, both returned a positive value (0.012, Maximum value of 0.2). </li>
+                          <li class="two">2. Found out that LSTM does not perform well in both short term and long term prediction with limited data. Neural ODE performs well in short term prediction but performs poorly in long term prediction.</li>
+                          <li class="two">3. Devised a new training algorithm for N-CATS. Instead of using Mean Squared Loss, 
+                            I modified the loss function to match auto-correlation behavior of true time series as well.</li>
+                          <li class="two">4. N-CATS outperform industry standards(LSTM) and baseline(Neural ODE) by performing great in both short term and long term prediction. Also, when computing the norm difference of the Lyapunov Exponent, N-CATS showed the smallest error. Thus, among the all three, N-CATS is the best performing one.</li>
+                        </ul>
+              
                         </p>
                     </div>  
                     
 
+                  <div class="one-column">
+                    <p>Future Work</p>
+                  </div>
 
+                  <div class="two-column">
+                    <p>Empirically speaking, auto-correlation loss seemed to be helpful in learning the dynamics only up to a certain point. It would be interesting to see if there is a way to learn more representative dynamics of the whole data rather than that of training data.</p>
+                  </div>
 
 
                     <div class="one-column">
@@ -207,7 +223,7 @@
         
 					        <div class="prev-next">
 					        
-					          <div class="prev-button"><a class="ajax-link" href="single-fullscreen.html">Previous work</a></div>
+					          <div class="prev-button"><a class="ajax-link" href="projects.html">Previous work</a></div>
 					          <div class="next-button"><a class="ajax-link" href="projects.html">Next work</a></div>
 					
 					        </div>
@@ -220,26 +236,6 @@
   <!--Home Sidebar-->
 
 <div id="ajax-sidebar"></div>
-
-
-  <!--Footer-->
-
-  <!-- <footer>
-
-    <div class="footer-margin">
-      <div class="social-footer">
-        <a href="https://www.facebook.com/thomsooncom"><i class="fa fa-facebook"></i></a>
-        <a href="https://www.behance.net/TomaszMazurczak"><i class="fa fa-behance"></i></a>
-      
-      </div>     
-      <div class="copyright">Distributed By: <a class="" href="https://htmltemplates.co" target="_blank">HTMLtemplates.co</a></div>
-      
-
-    
-    </div>
-
-
-  </footer> -->
 
 
 
