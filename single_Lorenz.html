@@ -86,9 +86,10 @@
 	          </div>
 
 		          <div class="two-column">
-		            <p>Due to high volatility, predicting cryptocurrency price is a challenging problem.
-                But recent discoveries claim that the cryptocurrency market shows chaotic behavior.
-                Thus, let's use that as prior knowledge and feed it to neural network!
+                <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 065455.png" width="70%"><p style="text-align: center;">Lorenz-63</p></div>
+		            <p>Lorenz-63 is a dynamical system that is non-linear and discrete-time. It is also both a chaotic and ergodic system. 
+                  Learning a Lorenz-63 from data would mean that statistics are reproduced: for example, auto-correlation is approaching to 0, lypunov spectrum is matching, and time average difference is converging.
+                  This project is supervised by Dr. Nisha Chandramoorthy from Georgia Institute of Technology.
                 <br><br>
                 </p>
                 <!-- <blockquote class="otro-blockquote">
@@ -120,12 +121,10 @@
   
                 <div class="two-column">
                   <p>
-                    Through this project, questions I want to address include:
+                    Through this project, questions we want to address include:
                     <ul>
-                      <li>1. Can we verify if the cryptocurrency market is indeed chaotic?</li>
-                      <li>2. How do baseline models perform in predicting price?</li>
-                      <li>3. How can we make a model learn market dynamics information?</li>
-                      <li>4. How does the new model perform? </li>
+                      <li>1. Can a Neural ODE learn a chaotic system? </li>
+                      <li>2. If not, how can we make Neural ODE learn a chaotic system?</li>
                     </ul>
             
                     </p>
@@ -137,36 +136,18 @@
                 </div>
     
                   <div class="two-column">
-                    <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/dataset (1).png" width="70%"><p style="text-align: center;">Dataset</p></div>
-                    <p>Data:
-                    
-                    <br>
-                    <ul>
-                      <li>1. Kaggle Bitcoin Historical Dataset.</li>
-                      <li>2. The Dataset includes every 1 minute historical price in 2021. 
-                      </li>
-                      <li>3. Only used closing price, as a problem of interest is a univariate time series prediction.</li>
-                    </ul></p>
+                    <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 065935.png" width="60%"><p style="text-align: center;"></p></div>
+                    <p>This supervised learning problem aims solve the above empirical risk minimization problem.
+                    Experiment details are in the presentation file attached below.
+                    </p>
+                    <br/>
+                    <p>New Training Algorithm:</p>
+                    <p>We add new regularization term that accounts for the difference of Jacobian matrix.</p>
+                    <br/>
 
-                    <p>
-                    Baseline:
-                    <br>
-                    <ul>
-                      <li>1. LSTM</li>
-                      <li>2. Neural ODE (Neural Ordinary Differential Equations)
-                      </li>
-                    </ul>
-                    </p>
-                    <br/><br/>
-                    <div><img style="display: block; margin: 0 auto;" src="img/Screenshot 2023-12-06 062621.png" width="25%"><p style="text-align: center;">Architecture of N-CATS</p></div>
-                    <p>
-                      New Model, N-CATS:
-                    </p>
-                    <p>
-                    For the latent model, we can use any type of neural network, but for this project, let's use Neural Stochastic Differential Equation, from torchSDE.
-  
-                    </p>
-                    
+                    <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 071327.png" width="60%"><p style="text-align: center;">Summary of Two Experiment</p></div>
+                    <p>Types of Model Created:</p>
+                    <p>After two phase of experiment, we create 4 different models based on the loss function and training dataset</p>
                   </div>
                  				  
 
@@ -178,19 +159,20 @@
       
                     <div class="two-column">
                       <br/><br/><br/><br/><br/><br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/multi_pred_node (2) (1)-1.png" width="70%"><p style="text-align: center;">Multi-step prediction of Neural ODE</p></div><br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/ncats_msp_nd_1000-1 (1) (1).png" width="70%"><p style="text-align: center;">Multi-step prediction of N-CATS</p></div><br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/Screenshot 2023-12-19 050759.png" width="70%"><p style="text-align: center;">Table of Loss</p></div><br/><br/>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 070529.png" width="60%"><p style="text-align: center;">Train and Test Loss of Neural ODE</p></div><br/><br/>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 070542.png" width="70%"><p style="text-align: center;">Phase Plot of True Lorenz and Neural ODE's Lorenz Starting From Outside of Attractor</p></div><br/><br/>
+                      <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/Screenshot 2023-12-19 050759.png" width="70%"><p style="text-align: center;">Table of Loss</p></div><br/><br/> -->
                       <p>
-                        Some of the findings includes:
+                        Findings from the first phase of experiment:
                         <ul>
-                          <li class="two">1. When computing lyapunov exponent from the time-series dataset, I was able to verify that crypto-currency market is indeed chaotic as claimed by previous works. When using function from nolds package, lyap_r, layp_e, both returned a positive value (0.012, Maximum value of 0.2). </li>
-                          <li class="two">2. Found out that LSTM does not perform well in both short term and long term prediction with limited data. Neural ODE performs well in short term prediction but performs poorly in long term prediction.</li>
-                          <li class="two">3. Devised a new training algorithm for N-CATS. Instead of using Mean Squared Loss, 
-                            I modified the loss function to match auto-correlation behavior of true time series as well.</li>
-                          <li class="two">4. N-CATS outperform industry standards(LSTM) and baseline(Neural ODE) by performing great in both short term and long term prediction. Also, when computing the norm difference of the Lyapunov Exponent, N-CATS showed the smallest error. Thus, among the all three, N-CATS is the best performing one.</li>
+                          <li class="two">1. As expected, training and test loss was small enough. And we would expect that generalization error will be low as well.</li>
+                          <li class="two">2. When tested with the initial point outside the attractor, solution generated by neural ODE showed different dynamics.</li>
+                          <li class="two">3. Also, Neural ODE's Lyapunov Exponent did not match with the True Lyapunov Exponent.</li>
                         </ul>
-              
+                        Findings from the second phase of experiment:
+                        <ul>
+                          <li class="two"></li>
+                        </ul>
                         </p>
                     </div>  
                     
