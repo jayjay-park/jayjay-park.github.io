@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="css/style-responsive.css">  
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
   <!--[if lt IE 9]>
   <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
@@ -75,9 +76,8 @@
             </div>
 
             <div class="two-column">
-              <!-- In particular, inspired by a recent discovery that the cryptocurrency market is a chaotic system, I extended my current research project to predict cryptocurrency market behavior. To learn dynamics from data with high volatility and noise, I integrated chaos and economic theories into a variant of Neural Stochastic Differential Equations, using auto-correlation of time-series data.  -->
-
-              <blockquote class="blockquote"><p>Inspired by a recent discovery of cryptocurrency market being a chaotic system, ...</p></blockquote>
+              <blockquote class="blockquote"><p>Inspired by a recent discovery that the cryptocurrency market is a chaotic system, to learn dynamics from data with high volatility and noise,
+                let's use chaos theory in training the model.</p></blockquote>
                 <br />
             </div>
 
@@ -86,18 +86,11 @@
 	          </div>
 
 		          <div class="two-column">
-		            <p>Due to high volatility, predicting cryptocurrency price is a challenging problem
+		            <p>Due to high volatility, predicting cryptocurrency price is a challenging problem.
+                But recent discoveries claim that the cryptocurrency market shows chaotic behavior.
+                Thus, let's use that as prior knowledge and feed it to neural network!
                 <br><br>
-                Recent discoveries claim that the cryptocurrency market shows chaotic behavior.
-                <br><br>
-                <ul>
-                  <li>1. Study conducted by Yang et al. points out how cryptocurrency price prediction is an even more difficult problem to solve than stock price prediction through analysis with entropy.</li>
-                  <li>2. A study conducted by Yi et al. shows that the cryptocurrency market is weakly market efficient, which just means that predicting crypto-asset price with just past trends of price is impossible</li>
-                </ul>
-                
                 </p>
-
-                
                 <!-- <blockquote class="otro-blockquote">
                   Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while. That's because they were able to connect experiences they've had and synthesize new things.
                   <span>Steve Jobs</span>
@@ -108,13 +101,13 @@
 
 
             <div class="one-column">
-              <p>Research Gap</p>
+              <p>Identify Research Gap</p>
             </div>
 
               <div class="two-column">
-                <p>No existing model learns both data trend + market dynamics for cryptocurrency-price prediction
+                <p>1. To the best of my knowledge, as of right now, no existing model learns both data trend + market dynamics for cryptocurrency-price prediction
                   <br><br>
-                  No existing model is trained with information on chaotic behavior of cryptocurrency market
+                  2. Also, no existing model is trained with information on chaotic behavior of cryptocurrency market
                 </p>
               </div>
 
@@ -144,7 +137,7 @@
                   <p>Data:
                     <br>
                     <ul>
-                      <li>Kaggle Bitcoin Historical Dataset.</li>
+                      <li class="one">Kaggle Bitcoin Historical Dataset.</li>
                       <li>The Dataset includes every 1 minute historical price in 2021. Only used closing price, as a problem of interest is a univariate time series prediction.
                       </li>
                     </ul></p>

@@ -547,6 +547,52 @@ CONTENT
         margin-top:1em;
       }
 
+      /*Lists */
+      
+      li {
+        color:#101010;
+        list-style:none;
+        position: relative;
+        padding-left:50px;
+        line-height: 2;
+        font-size:15px;
+      }
+      
+      li:before {
+        font-family:FontAwesome;
+        position: absolute;
+        left: 0;
+        color:#394346;
+        font-size:15px;
+      }
+      /* full circle  */
+      li.one:before {
+         content:"\f111"; 
+      }
+      /* check mark  */
+      li.two:before {
+         content:"\f00c";
+      }
+      /* empty circle  */
+      li.three:before {
+         content:"\f10c";
+      }
+      /* heart circle  */
+      li.four:before {
+         content:"\f004";
+      }
+      /* bomb  */
+      li.five:before {
+         content:"\f1e2";
+      }
+      /* lightning */
+      li.six:before {
+         content:"\f0e7";
+      }
+      
+      li:hover:before {
+        color:#101010;
+      }
 
 /*
 **************************
