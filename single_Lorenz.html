@@ -69,7 +69,7 @@
 
         <div class="text-intro">
 
-          <h1>Learning Lorenz with Neural ODE & Jacocobian Matrix</h1>
+          <h1>Learning Lorenz with Neural ODE & Jacobian Matrix</h1>
           
             <div class= "one-column">
               <p></p>
@@ -81,11 +81,13 @@
                 <br />
             </div>
 
+            <br/><br/><br/><br/><br/>
 	          <div class="one-column">
-	            <p>Motivation</p>
+	            <p><strong>Motivation</strong></p>
 	          </div>
 
 		          <div class="two-column">
+                <br/><br/><br/><br/><br/>
                 <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 065455.png" width="50%"><p style="text-align: center;">Lorenz-63</p></div>
 		            <p>Lorenz-63 is a dynamical system that is non-linear and discrete-time. It is also both a chaotic and ergodic system. 
                   Learning a Lorenz-63 from data would mean that statistics are reproduced: for example, auto-correlation is approaching to 0, lypunov spectrum is matching, and time average difference is converging.
@@ -97,20 +99,6 @@
                   <span>Steve Jobs</span>
                 </blockquote> -->
 		          </div>   
-
-              
-
-
-            <!-- <div class="one-column">
-              <p>Identify Research Gap</p>
-            </div>
-
-              <div class="two-column">
-                <p>1. To the best of my knowledge, as of right now, no existing model learns both data trend + market dynamics for cryptocurrency-price prediction
-                  <br><br>
-                  2. Also, no existing model is trained with information on chaotic behavior of cryptocurrency market
-                </p>
-              </div> -->
 
 
 
@@ -128,59 +116,69 @@
                     </ul>
             
                     </p>
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
                   </div>
 
 
+
+
+              <br/><br/><br/><br/><br/>
               <div class="one-column">
-                <br/><br/>
-                  <p>Method</p>
+                  <p><strong>Method</strong></p>
                 </div>
     
                   <div class="two-column">
-                    <br/><br/>
-                    <br/>
-                    <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 065935.png" width="80%"><p style="text-align: center;"></p></div>
+                    <br/><br/><br/><br/><br/>
+                    <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 065935.png" width="90%"><p style="text-align: center;"></p></div>
                     <p>This supervised learning problem aims solve the above empirical risk minimization problem.
                     Experiment details are in the presentation file attached below.
                     </p>
-                    <br/><br/>
-                    <p>New Training Algorithm:</p>
-                    <p>We add new regularization term that accounts for the difference of Jacobian matrix.</p>
+                    
                     <br/><br/><br/>
-
+                    <p><u>New Training Algorithm</u>:</p>
+                    <p>We add new regularization term that accounts for the difference of Jacobian matrix.</p>
+                    
+                    <br/><br/><br/><br/>
                     <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 071327.png" width="50%"><p style="text-align: center;">Summary of Two Experiment</p></div>
-                    <p>Types of Model Created:</p>
+                    <p><u>Types of Model Created</u>:</p>
                     <p>After two phase of experiment, we create 4 different models based on the loss function and training dataset</p>
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
                   </div>
                  				  
 
-          
+
+
+                  <br/><br/><br/><br/><br/>
                   <div class="one-column">
-                    <br/><br/><br/><br/><br/>
-                    <p>Findings</p>
+                    <p><strong>Findings</strong></p>
                   </div>
       
                     <div class="two-column">
-                      <br/><br/><br/><br/><br/><br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 070529.png" width="60%"><p style="text-align: center;">Train and Test Loss of Neural ODE</p></div><br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 070542.png" width="70%"><p style="text-align: center;">Phase Plot of True Lorenz and Neural ODE's Lorenz Orbit Starting From Outside of Attractor</p></div><br/><br/>
+                      <br/><br/>
+                      
+                      <br/><br/><br/>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 070529.png" width="60%"><p style="text-align: center;"><small>Train and Test Loss of Neural ODE</small></p><br/><br/><br/><br/></div>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 070542.png" width="70%"><p style="text-align: center;"><small>Phase Plot of True Lorenz and Neural ODE's Lorenz Orbit Starting From Outside of Attractor</small></p><br/><br/><br/><br/></div>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/MSE_0_2000init_15t_animation.gif" width="60%"><p style="text-align: center;"><small>Original Neural ODE Simulation</small></p><br/><br/><br/><br/></div>
                       <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/Screenshot 2023-12-19 050759.png" width="70%"><p style="text-align: center;">Table of Loss</p></div><br/><br/> -->
                       <p>
-                        Findings from the first phase of experiment:
+                        <u>Findings from the first phase of experiment</u>:<br/><br/>
                         <ul>
                           <li class="two">1. As expected, training and test loss was small enough. And we would expect that generalization error will be low as well.</li>
-                          <li class="two">2. When tested with the initial point outside the attractor, solution generated by neural ODE showed different dynamics.</li>
+                          <li class="two">2. When tested with the initial point outside the attractor, solution generated by neural ODE showed different dynamics(some trajectories showed periodic or fixed point behavior).</li>
                           <li class="two">3. Also, Neural ODE's Lyapunov Exponent did not match with the True Lyapunov Exponent.</li>
                         </ul>
                       </p>
                       <br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034053.png" width="60%"><p style="text-align: center;">Train and Test Loss of Entire Models</p></div><br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034132.png" width="60%"><p style="text-align: center;">Phase Plot of True Lorenz and new Neural ODE's Lorenz Orbit Starting From Outside of Attractor</p></div><br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034301.png" width="60%"><p style="text-align: center;">Table of Learned Lyapunov Spectrum</p></div><br/><br/>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034053.png" width="50%"><p style="text-align: center;"><small>Train and Test Loss of Entire Models</small></p><br/><br/><br/></div><br/><br/><br>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034301.png" width="50%"><p style="text-align: center;"><small>Table of Learned Lyapunov Spectrum</small></p><br/><br/><br/></div><br/><br/>
+                      <br/><br/>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034132.png" width="70%"><p style="text-align: center;"><small>Phase Plot of True Lorenz and new Neural ODE's Lorenz Orbit Starting From Outside of Attractor</small></p><br/><br/><br/></div><br/><br/>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Jac_0_animation.gif" width="60%"><p style="text-align: center;"><small>New Neural ODE's Simulation</small></p><br/><br/><br/><br/></div>
                       
                       <p>
-                        
-                        Findings from the second phase of experiment:
+                        <br/><br/><br/>
+                        <u>Findings from the second phase of experiment</u>:<br/><br/>
                         <ul>
                           <li class="two">1. Along with the lowest test loss, Nerual ODE with Jacobian Loss showed the correct type of phase plot</li>
                           <li class="two">2. While original Neural ODE did not learn the true Lyapunov Spectrum, the new Neural ODE learned the correct Lyapunov Spectrum, when taking account the numerical error of approximating Lyapunov Spectrum (QR method).</li>
@@ -189,21 +187,22 @@
                         
                         </p>
                         <p>More experiment results can be found from the slides attached below.</p>
-                    </div>  
+                        <br><br><br><br><br/><br/><br/>
+                      </div>  
                     
 
 
 
-
+                  <br/><br/><br/><br/><br/>
                   <div class="one-column">
-                    <br/><br/><br/><br/><br/>
-                    <p>Future Work</p>
+                    <p><strong>Future Work</strong></p>
                   </div>
 
                   <div class="two-column">
-                    <br/><br/><br/><br/><br/><br/><br/>
+                    <br/>
                     <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/loss_ncats (1).png" width="70%"><p style="text-align: center;">Loss of N-CATS</p></div> -->
                     <p>Want to explore if it works for other dynamical systems as well and understand why. Also, we must redefine generalization error to reflect true learning of ergodic dynamics.</p>
+                    <br><br>
                   </div>
 
                     <!-- <div class="one-column">
@@ -218,14 +217,14 @@
                                
                       <!-- <a href="img/CV_11_25_23 (11).pdf">CV</a><br/><br/>      -->
 
+                      <br/><br/><br/><br/><br/>
                       <div class="one-column">
-                        <br/><br/><br/><br/><br/>
-                        <p>More Information</p>
+                        <p><strong>More Information</strong></p>
                       </div>
           
                         <div class="two-column">
                           <p>
-                          <br/><br/><br/><br/><br/>
+                          <br/>
                           For more detailed information, please look at the followings:
                           <br/>
                           <a href="img/S_Lorenz/Presentation_on_NeuralODE (7).pdf ">Presentation</a><br/><br/> 

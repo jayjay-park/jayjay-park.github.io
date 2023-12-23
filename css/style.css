@@ -473,7 +473,7 @@ CONTENT
       }
       .blockquote p {
           font-family: "Utopia-italic";
-          font-size: 35px;
+          font-size: 45px;
           font-weight: 700px;
           text-align: center;
       }
@@ -493,7 +493,7 @@ CONTENT
         top: 0;
         
         content:"\f10d";
-        font-size: 60px;
+        font-size: 50px;
         color: rgba(0,0,0,0.1);
          
       }
