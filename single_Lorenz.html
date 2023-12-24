@@ -77,18 +77,18 @@
 
             <div class="two-column">
               <br/><br/><br/><br/><br/>
-              <blockquote class="blockquote"><p>Can a Neural ODE learn a chaotic system?</p></blockquote>
+              <blockquote class="blockquote"><p><font size="+1">Can a Neural ODE learn a chaotic system?</font></p></blockquote>
                 <br />
             </div>
 
             <br/><br/><br/><br/><br/>
 	          <div class="one-column">
-	            <p><strong>Motivation</strong></p>
+	            <p><strong><font size="+1">Motivation</font></strong></p>
 	          </div>
 
 		          <div class="two-column">
                 <br/><br/><br/><br/><br/>
-                <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 065455.png" width="50%"><p style="text-align: center;">Lorenz-63</p></div>
+                <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/animation_alpha_gist (2).gif" width="70%"><p style="text-align: center;">Lorenz-63</p></div>
 		            <p>Lorenz-63 is a dynamical system that is non-linear and discrete-time. It is also both a chaotic and ergodic system. 
                   Learning a Lorenz-63 from data would mean that statistics are reproduced: for example, auto-correlation is approaching to 0, lypunov spectrum is matching, and time average difference is converging.
                   This project is supervised by Dr. Nisha Chandramoorthy from Georgia Institute of Technology.
@@ -124,12 +124,12 @@
 
               <br/><br/><br/><br/><br/>
               <div class="one-column">
-                  <p><strong>Method</strong></p>
+                  <p><strong><font size="+1">Method</font></strong></p>
                 </div>
     
                   <div class="two-column">
                     <br/><br/><br/><br/><br/>
-                    <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 065935.png" width="90%"><p style="text-align: center;"></p></div>
+                    <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 065935.png" width="80%"><p style="text-align: center;"></p></div>
                     <p>This supervised learning problem aims solve the above empirical risk minimization problem.
                     Experiment details are in the presentation file attached below.
                     </p>
@@ -150,16 +150,16 @@
 
                   <br/><br/><br/><br/><br/>
                   <div class="one-column">
-                    <p><strong>Findings</strong></p>
+                    <p><strong><font size="+1">Findings</font></strong></p>
                   </div>
       
                     <div class="two-column">
                       <br/><br/>
                       
                       <br/><br/><br/>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/MSE_0_2000init_15t_animation.gif" width="60%"><p style="text-align: center;"><small>Original Neural ODE Simulation Learning Incorrect Dynamic</small></p><br/><br/><br/><br/></div>
                       <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 070529.png" width="60%"><p style="text-align: center;"><small>Train and Test Loss of Neural ODE</small></p><br/><br/><br/><br/></div>
                       <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 070542.png" width="70%"><p style="text-align: center;"><small>Phase Plot of True Lorenz and Neural ODE's Lorenz Orbit Starting From Outside of Attractor</small></p><br/><br/><br/><br/></div>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/MSE_0_2000init_15t_animation.gif" width="60%"><p style="text-align: center;"><small>Original Neural ODE Simulation</small></p><br/><br/><br/><br/></div>
                       <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/Screenshot 2023-12-19 050759.png" width="70%"><p style="text-align: center;">Table of Loss</p></div><br/><br/> -->
                       <p>
                         <u>Findings from the first phase of experiment</u>:<br/><br/>
@@ -169,12 +169,14 @@
                           <li class="two">3. Also, Neural ODE's Lyapunov Exponent did not match with the True Lyapunov Exponent.</li>
                         </ul>
                       </p>
+                      <br/><br/><br/><br/><br/><br/>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Jac_0_animation.gif" width="60%"><p style="text-align: center;"><small>New Neural ODE's Simulation</small></p><br/><br/><br/><br/></div>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034132.png" width="70%"><p style="text-align: center;"><small>Phase Plot of True Lorenz and new Neural ODE's Lorenz Orbit Starting From Outside of Attractor</small></p><br/><br/><br/></div><br/><br/>
                       <br/><br/>
                       <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034053.png" width="50%"><p style="text-align: center;"><small>Train and Test Loss of Entire Models</small></p><br/><br/><br/></div><br/><br/><br>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034301.png" width="50%"><p style="text-align: center;"><small>Table of Learned Lyapunov Spectrum</small></p><br/><br/><br/></div><br/><br/>
-                      <br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034132.png" width="70%"><p style="text-align: center;"><small>Phase Plot of True Lorenz and new Neural ODE's Lorenz Orbit Starting From Outside of Attractor</small></p><br/><br/><br/></div><br/><br/>
-                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Jac_0_animation.gif" width="60%"><p style="text-align: center;"><small>New Neural ODE's Simulation</small></p><br/><br/><br/><br/></div>
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034301.png" width="50%"><p style="text-align: center;"><small>Table of Learned Lyapunov Spectrum</small></p></div>
+                    
+
                       
                       <p>
                         <br/><br/><br/>
@@ -195,7 +197,7 @@
 
                   <br/><br/><br/><br/><br/>
                   <div class="one-column">
-                    <p><strong>Future Work</strong></p>
+                    <p><strong><font size="+1">Future Work</font></strong></p>
                   </div>
 
                   <div class="two-column">
@@ -219,7 +221,7 @@
 
                       <br/><br/><br/><br/><br/>
                       <div class="one-column">
-                        <p><strong>More Information</strong></p>
+                        <p><strong><font size="+1">More Information</font></strong></p>
                       </div>
           
                         <div class="two-column">

@@ -473,7 +473,7 @@ CONTENT
       }
       .blockquote p {
           font-family: "Utopia-italic";
-          font-size: 45px;
+          font-size: 55px;
           font-weight: 700px;
           text-align: center;
       }
@@ -547,6 +547,7 @@ CONTENT
         margin-top:1em;
       }
 
+      
       /*Lists */
       
       li {
