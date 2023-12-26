@@ -899,6 +899,13 @@ Credit: https://www.codewithfaraz.com/content/162/create-an-animated-button-with
   margin-top: 50px;
 }
 
+.center_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 button.fancy {
   -webkit-appearance: button;
   background-color: transparent;
