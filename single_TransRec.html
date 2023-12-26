@@ -1,0 +1,304 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+
+  <meta charset="utf-8">
+  <title>Jayjay's Portfolio</title>
+  <meta name="description" content="JAYJAY">
+  <meta name="keywords" content="Jayjay Park, Portfolio">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="thomsoon.com">
+  <link rel="icon" type="image/png" href="img/icon.png" />
+
+<!--Style-->
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-responsive.css">  
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+</head>
+
+<body>
+
+
+<!--Preloader-->
+<div class="preloader" id="preloader">
+    <div class="item">
+      <div class="spinner">
+      </div>
+    </div>
+</div>
+
+<div class="opacity-nav">
+        <div class="menu-index" id="buttons" style="z-index:999999">
+        <i class="fa  fa-close"></i>
+        </div>
+    <ul class="menu-fullscreen">
+      <li><a class="ajax-link" href="index.html">Home</a></li>
+      <li><a class="ajax-link" href="projects.html">Projects</a></li>
+      <li><a class="ajax-link" href="publication.html">Publications</a></li>
+      <li><a class="ajax-link" href="about-us.html">About</a></li>
+      <li><a class="ajax-link" href="contact.html">Contact</a></li>
+    </ul>
+</div>
+
+
+  <!--Header-->
+  <header id="fullscreen">
+      <div class="logo" id="full"><a class="ajax-link" href="index.html">JAYJAY</a></div>
+        <div class="menu-index" id="button">
+        <i class="fa fa-bars"></i>
+        </div>
+
+  </header>
+
+  <div class="clear"></div>
+
+
+  <!--Content-->
+
+  <div class="content" id="ajax-content">
+
+
+        <div class="text-intro">
+
+          <h1>TransRecG: Transformer-Based Recommendation System using Graph Embeddings</h1>
+          
+            <div class= "one-column">
+              <p></p>
+            </div>
+
+            <div class="two-column">
+              <br/><br/><br/><br/><br/>
+              <blockquote class="blockquote"><p><font size="+1">How can we use a temporal information in Recommendation System?</font></p></blockquote>
+                <br />
+            </div>
+
+            <br/><br/><br/><br/><br/>
+	          <div class="one-column">
+	            <p><strong><font size="+1">Motivation</font></strong></p>
+	          </div>
+
+		          <div class="two-column">
+                <br/><br/><br/><br/><br/>
+                <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/animation_alpha_gist (2).gif" width="70%"><p style="text-align: center;">Lorenz-63</p></div> -->
+		            <p>As a project for CSE 6240: Web Search & Text Mining in GeorgiaTech, we aimed to enhance performance of sequential recommendation task using: temporal information, and higher order connectivity features like user-user and item-item relations.
+                <br><br>
+                </p>
+                <!-- <blockquote class="otro-blockquote">
+                  Creativity is just connecting things. When you ask creative people how they did something, they feel a little guilty because they didn't really do it, they just saw something. It seemed obvious to them after a while. That's because they were able to connect experiences they've had and synthesize new things.
+                  <span>Steve Jobs</span>
+                </blockquote> -->
+		          </div>   
+
+
+
+            <div class="one-column">
+                <!-- <p>Research Questions</p> -->
+                <p></p>
+              </div>
+
+              <div class="two-column">
+                <br/><br/><br/><br/><br/>
+                <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_TransR/Screenshot 2023-12-23 032927.png" width="80%"><p style="text-align: center;"></p></div> -->
+                <p>
+                  Two baselines we compare with our model are: Behavioral Sequence Transformer (BST) and Neural Graph Collaborative Filtering (NGCF).
+                  <ul>
+                    <li class="two">Limitation of BST: not capturing higher order user-user or item-item relations</li>
+                    <li class="two">Limitation of NGCF: does not consider the temporal behavior of the user, nor does it learn the underlying user-user or item-item relationships.</li>
+                  </ul>
+                </p>
+                <p>To overcome such limitation, we built a recommendation system that uses BST and NGCF on a User-Movie Knowledge Graph.</p>
+                </div>
+                <!-- <div class="two-column">
+                  <p>
+                    
+                    <ul>
+                      <li>1. Can a Neural ODE learn a chaotic system? </li>
+                      <li>2. If not, how can we make Neural ODE learn a chaotic system?</li>
+                    </ul>
+            
+                    </p>
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                  </div> -->
+
+
+
+
+              <br/><br/><br/><br/><br/>
+              <div class="one-column">
+                  <p><strong><font size="+1">Method</font></strong></p>
+                </div>
+                <div class="two-column">
+                  <br/><br/><br/><br/><br/>
+                  <div><img style="display: block; margin: 0 auto;" src="img/S_TransR/Screenshot 2023-12-23 032927.png" width="80%"><p style="text-align: center;"></p></div>
+                    
+                    <br/><br/><br/>
+                    <p><u>How Does Our New Model Work?</u>:</p>
+                    <p>
+                    <ul>
+                      <li class="one">BST captures the sequential information to understand the temporal behavior of the user.</li>
+                      <li class="one">NGCF model on the Movie-User KG captures the user-user, movie-movie and user-movie relations.</li> 
+                      <li class="one">Augmenting the Transformer with the RGCN embeddings from the KG helps to leverage temporal and spatial information to make better and personalized recommendations</li>
+                    </ul>  
+                    </p>
+                    
+                    <br/><br/><br/><br/>
+                    <p>
+                      Along with evaluating the model based on rating prediction task, we also eplored the ability of the models to handle the user cold start problem, and analyzed the tradeoff between number of training samples and loss.
+                    </p>
+                    <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 071327.png" width="50%"><p style="text-align: center;">Summary of Two Experiment</p></div>
+                    <p><u>Types of Model Created</u>:</p>
+                    <p>After two phase of experiment, we create 4 different models based on the loss function and training dataset</p> -->
+                    <br/><br/><br/><br/><br/><br/><br/><br/>
+                  </div>
+                 				  
+
+
+
+                  <br/><br/><br/><br/><br/>
+                  <div class="one-column">
+                    <p><strong><font size="+1">Findings</font></strong></p>
+                  </div>
+      
+                    <div class="two-column">
+                      <br/><br/>
+                      
+                      <br/><br/><br/>
+                      <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/MSE_0_2000init_15t_animation.gif" width="60%"><p style="text-align: center;"><small>Original Neural ODE Simulation Learning Incorrect Dynamic</small></p><br/><br/><br/><br/></div> -->
+                      <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-19 070529.png" width="60%"><p style="text-align: center;"><small>Train and Test Loss of Neural ODE</small></p><br/><br/><br/><br/></div> -->
+                      <div><img style="display: block; margin: 0 auto;" src="img/S_TransR/Screenshot 2023-12-23 032837.png" width="70%"><p style="text-align: center;"><small></small></p><br/><br/><br/><br/></div>
+                      <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/Screenshot 2023-12-19 050759.png" width="70%"><p style="text-align: center;">Table of Loss</p></div><br/><br/> -->
+                      <p>
+                        <u>Findings from the Experiments</u>:<br/><br/>
+                        <ul>
+                          <li class="two">1. Augmenting BST models with graph embeddings improves the performance of the model. Graph embeddings from RGCN + KG performs better than GCN + BP models, as initial embeddings are more meaningful (GloVE).  </li>
+                          <li class="two">2. For the cold start problem, our model with Knowledge Graph performed the best.</li>
+                          <li class="two">3. As number of training sample increased, the performance of BST models augmented with graph embeddings almost remained unchanged.</li>
+                        </ul>
+                      </p>
+                      <br/><br/><br/><br/><br/><br/>
+                      <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Jac_0_animation.gif" width="60%"><p style="text-align: center;"><small>New Neural ODE's Simulation</small></p><br/><br/><br/><br/></div> -->
+                      <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034132.png" width="70%"><p style="text-align: center;"><small>Phase Plot of True Lorenz and new Neural ODE's Lorenz Orbit Starting From Outside of Attractor</small></p><br/><br/><br/></div><br/><br/> -->
+                      <br/><br/>
+                      <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034053.png" width="50%"><p style="text-align: center;"><small>Train and Test Loss of Entire Models</small></p><br/><br/><br/></div><br/><br/><br> -->
+                      <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_Lorenz/Screenshot 2023-12-21 034301.png" width="50%"><p style="text-align: center;"><small>Table of Learned Lyapunov Spectrum</small></p></div> -->
+                    
+
+                      
+                      <!-- <p>
+                        <br/><br/><br/>
+                        <u>Findings from the second phase of experiment</u>:<br/><br/>
+                        <ul>
+                          <li class="two">1. Along with the lowest test loss, Nerual ODE with Jacobian Loss showed the correct type of phase plot</li>
+                          <li class="two">2. While original Neural ODE did not learn the true Lyapunov Spectrum, the new Neural ODE learned the correct Lyapunov Spectrum, when taking account the numerical error of approximating Lyapunov Spectrum (QR method).</li>
+                          <li class="two">3. Adding Jacobian to the loss for Neural ODE learns the correct dynamics for lorenz-63 and its statistics, learning correct ergodic and chaotic system.</li>
+                        </ul>
+                        
+                        </p> -->
+                        <p>More experiment results can be found from the report attached below.</p>
+                        <br><br><br><br><br/><br/><br/>
+                      </div>  
+                    
+
+
+
+                  <br/><br/><br/><br/><br/>
+                  <div class="one-column">
+                    <p><strong><font size="+1">Future Work</font></strong></p>
+                  </div>
+
+                  <div class="two-column">
+                    <br/>
+                    <!-- <div><img style="display: block; margin: 0 auto;" src="img/S_NCATS/loss_ncats (1).png" width="70%"><p style="text-align: center;">Loss of N-CATS</p></div> -->
+                    <p>We want to experiment with different sequence length of BST model. Also, we implement the Knowledge Graph (KG) as a heterogeneous graph only in terms of the edges. Creating the KG as a fully heterogeneous graph with both different types of nodes and edges, is a relevant future work as user-movie-attribute graphs are composed of different types of entities in nature.</p>
+                    <br><br>
+                  </div>
+
+                    <!-- <div class="one-column">
+                      <br/><br/><br/><br/><br/>
+                      <p>Contribution to the Literature</p>
+                    </div>
+        
+                      <div class="two-column">
+                        <br/><br/><br/><br/><br/>
+                        <p>Novelty: When conducting this project, this was the first work to solve crypto-currency price prediction problem using auto-correlation in training deep learning model</p>
+                      </div> -->
+                               
+                      <!-- <a href="img/CV_11_25_23 (11).pdf">CV</a><br/><br/>      -->
+
+                      <br/><br/><br/><br/><br/>
+                      <div class="one-column">
+                        <p><strong><font size="+1">More Information</fontsingle_Lorenz.html></strong></p>
+                      </div>
+          
+                        <div class="two-column">
+                          <p>
+                          <br/>
+                          For more detailed information, please look at the followings:
+                          <br/>
+                          <a href="img/S_TransR/CSE_6240_Project_Final_Report (1).pdf ">Report</a><br/><br/> 
+                          <!-- <a href="img/S_NCATS/Presentation_on_N_CATS (3).pdf">Presentation</a><br/><br/>  -->
+                          <!-- <a href="https://github.com/jayjay-park/N-CATS">Link to Github</a> -->
+                        </p>
+                        </div>
+                <div class="clear"></div>   				  
+                 				        
+				        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+				        
+				        <!-- <img src="img/single/1.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/2.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/3.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/4.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/5.jpg" width="100%"><br/><br/><br/><br/>
+				        <img src="img/single/6.jpg" width="100%"> -->
+        
+        
+					        <div class="prev-next">
+                    
+					          <div class="prev-button"><a class="ajax-link" href="projects.html">Previous work</a></div>
+					          <div class="next-button"><a class="ajax-link" href="projects.html">Next work</a></div>
+					
+					        </div>
+            </div>
+        
+    </div>
+
+
+
+  <!--Home Sidebar-->
+
+<div id="ajax-sidebar"></div>
+
+
+
+<!--Scripts-->
+
+  <script src="js/jquery.min.js"></script>
+	<script src="js/jquery.easing.min.js"></script>
+	<script src="js/modernizr.custom.42534.js" type="text/javascript"></script>
+  <script src="js/jquery.waitforimages.js" type="text/javascript"></script>
+  <script src="js/typed.js" type="text/javascript"></script>
+  <script src="js/masonry.pkgd.min.js" type="text/javascript"></script>  
+  <script src="js/imagesloaded.pkgd.min.js" type="text/javascript"></script>    
+  <script src="js/jquery.jkit.1.2.16.min.js"></script>
+ 
+  <script src="js/script.js" type="text/javascript"></script>
+  
+	<script>
+    $('#button, #buttons').on('click', function() {
+      $( ".opacity-nav" ).fadeToggle( "slow", "linear" );
+    // Animation complete.
+    });
+  </script>
+
+
+</body>
+</html>
