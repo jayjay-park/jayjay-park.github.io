@@ -393,7 +393,7 @@ CONTENT
   margin-top: 150px;
   /* margin-bottom: 350px; */
   /* Add a fixed height to prevent content shifting */
-  height: 200px; /* Adjust this value based on your desired typewriter height */
+  height: 180px; /* Adjust this value based on your desired typewriter height */
   margin: 150px auto 0;
 }
 
