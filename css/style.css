@@ -896,7 +896,7 @@ Credit: https://www.codewithfaraz.com/content/162/create-an-animated-button-with
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 
 .center_img {
@@ -915,7 +915,7 @@ button.fancy {
   color: #fff;
   cursor: pointer;
   display: inline-block;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.05em;
   margin: 0;
   outline: none;
