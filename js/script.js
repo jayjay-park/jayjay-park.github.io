@@ -168,7 +168,7 @@ $(document).ready(function(){
 	setTimeout( function(){
 		if($("#site-type").length) {
         $(".typewrite span").typed({
-            strings: ["Hi, I'm Jayjay Park", "An interdisciplinary machine learning researcher", "A Computational Model Developer"],
+            strings: ["Hi, I'm Jayjay Park", "An interdisciplinary ML researcher", "A Computational Model Developer"],
             typeSpeed: 100,
             backDelay: 500,
             loop: true,
