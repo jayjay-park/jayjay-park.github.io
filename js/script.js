@@ -169,7 +169,7 @@ $(document).ready(function(){
 		if($("#site-type").length) {
         $(".typewrite span").typed({
             strings: ["Hi, I'm Jayjay Park", "An interdisciplinary ML researcher", "A Computational Model Developer"],
-            typeSpeed: 100,
+            typeSpeed: 150,
             backDelay: 500,
             loop: true,
             contentType: 'html', // or text
